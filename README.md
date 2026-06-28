@@ -13,15 +13,10 @@ A complete development, analysis, and implementation repository for a 12-Degree-
 - [Key Features](#key-features)
 - [Demonstration](#demonstration)
 - [Hardware Specifications](#hardware-specifications)
-- [Prerequisites](#prerequisites)
-- [Repository Structure](#repository-structure)
-- [Quick Start Guide](#quick-start-guide)
 - [Robotic Analysis (FK, IK, Dynamics)](#robotic-analysis)
-- [Future Work](#future-work)
-- [Team Members](#team-members)
 - [Acknowledgements](#acknowledgements)
-- [Citation](#citation)
-- [License](#license)
+
+
 
 ---
 
@@ -69,21 +64,7 @@ https://github.com/user-attachments/assets/99d48344-16b6-40cd-ba60-ab81547dad24
 
 ---
 
-# Prerequisites
 
-To compile the firmware, modify the CAD, or run the simulations, ensure you have the following software installed:
-
-## Firmware
-
-* Arduino IDE (v1.8.x or newer) with the `Servo.h` and `FlexiTimer2` libraries installed.
-
-## Simulations
-
-* MATLAB R2023a (or later)
-
-OR
-
-* Python 3.8+ (with `numpy`, `matplotlib`, and `scipy`).
 
 ## Fabrication
 
@@ -91,85 +72,7 @@ OR
 
 ---
 
-# Repository Structure
 
-All necessary files to replicate this build are organized within the following directories:
-
-```text
-├── CAD/                # Full CAD assembly (STEP) and print-ready files (STL)
-
-├── firmware/           # Arduino code (IK solvers, gait control, servo mapping)
-
-├── simulations/        # MATLAB/Python scripts for FK, IK, and dynamics analysis
-
-├── docs/               # Detailed project report, diagrams, and Bill of Materials (BOM)
-
-└── media/              # Images, GIFs, and videos of the prototype
-```
-
----
-
-# Quick Start Guide
-
-## 1. Fabrication & Assembly
-
-* Navigate to the `CAD/STL/` directory and 3D print all structural components.
-
-* Assemble the chassis and mount the 12 SG90 servos.
-
-* Wire the electronics according to the Wiring Diagram located in `docs/wiring_diagrams/`.
-
----
-
-## 2. Firmware Architecture & Flashing
-
-### Phase 1: Calibration (`firmware/servo_calibration/`)
-
-* **Crucial:** Run this *before* attaching the plastic servo horns. It locks all 12 servos at exactly 90 degrees to ensure perfect mechanical alignment.
-
-### Phase 2: Hardcoded Testing (`firmware/hardcoded_movements/`)
-
-* Run this after full assembly. It executes a pre-programmed loop (Forward, Backward, Wave) to test the inverse kinematics and weight distribution without needing a wireless connection.
-
-### Phase 3: Final Deployment (`firmware/bluetooth_teleoperation/`)
-
-* The final code. It listens to the HC-05 module and translates single-character Bluetooth commands into real-time IK target coordinates.
-
----
-
-## 3. Teleoperation & Android App
-
-### Direct Download
-
-Navigate to the `software/` folder in this repository and download the `Bluetooth_RC_Controller.apk` directly to your Android device.
-
-### Connection Steps
-
-1. Power on the robot.
-
-2. Pair the HC-05 module with your Android device in your phone's Bluetooth settings (Default PIN is `0000` or `1234`).
-
-3. Launch the app, click the gear icon, and connect to the HC-05 module. (The red LED on the HC-05 will stop flashing once connected).
-
-4. Use the interface to drive: **F** (Forward), **B** (Backward), **L/R** (Turn), and the **Warning Triangle** (Wave Gesture).
-
-<p align="center">
-<img width="805" height="328" alt="image" src="https://github.com/user-attachments/assets/a145aec7-2ca8-41cf-9a17-1544a0025694" />
-</p>
-
----
-
-## 4. Running the Simulations
-
-To verify the kinematics and dynamic models locally:
-
-* Navigate to the `simulations/` directory.
-
-* Run the Inverse Kinematics solver script to generate the operational workspace.
-
-* Run the Trajectory Plotting script to visualize the joint position and velocity curves.
-
----
 
 # Robotic Analysis
 
