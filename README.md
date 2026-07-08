@@ -260,6 +260,29 @@ $$q(t) = a_0 + a_1 t + a_2 t^2 + a_3 t^3$$
 </p>
 
 ---
+## 👤 Author
+
+
+
+Kamal Assudani
+Electrical Engineering, IIT Goa
+📧 [kamal.assudani.23063@iitgoa.ac.in](mailto:kamal.assudani.23063@iitgoa.ac.in)
+
+Ameya Bhagwat
+Mechanical Engineering, IIT Goa
+📧 [ameya.sunil.23063@iitgoa.ac.in](mailto:ameya.sunil.23063@iitgoa.ac.in)
+
+Logeshwaran L
+Mechanical Engineering, IIT Goa
+📧 [logeshwaran.l.23063@iitgoa.ac.in](mailto:logeshwaran.l.23063@iitgoa.ac.in)
+
+Parth Kale
+Mechanical Engineering, IIT Goa
+📧 [parth.rajesh.23063@iitgoa.ac.in](mailto:parth.rajesh.23063@iitgoa.ac.in)
+
+Shrinath Teknur
+Electrical Engineering, IIT Goa
+📧 [TEKNUR.SHRINATH.23042@iitgoa.ac.in](mailto:TEKNUR.SHRINATH.23042@iitgoa.ac.in)
 
 # Acknowledgements
 
